@@ -1,0 +1,754 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(241, 247, 255);
+}
+
+html {
+    font-size: 18px;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.landpage {
+    padding-top: 1rem;
+    background-color: rgb(78, 46, 192);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+}
+.landpage img{
+    position: absolute;
+    right: 1rem;
+    opacity: 1;
+    z-index: 2;
+}
+.landpage .leftside {
+    width: 600px;
+    margin-left: 2rem;
+    z-index: 3;
+}
+
+.landpage .leftside h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    color: rgb(219, 219, 255);
+}
+
+.landpage .leftside p {
+    width: 500px;
+    line-height: 1.5rem;
+}
+
+
+
+#explore {
+    margin-top: 1rem;
+    padding: .3rem .7rem;
+    border-radius: .2rem;
+    border: none;
+    opacity: 1;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: orangered;
+    font-weight: 500;
+    /* color: white; */
+    letter-spacing: 1px;
+}
+
+#explore:hover {
+    background-color: rgb(224, 85, 252);
+    color: white;
+    transition: all .6s;
+}
+
+
+#logo {
+    height: 90px;
+    filter: brightness(1000%);
+}
+
+.navigationbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgb(78, 46, 192);
+    z-index: 10;
+}
+
+.navbar {
+    display: flex;
+    gap: 3rem;
+    color: white;
+    padding: 0 1rem;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar ul li .hide {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    line-height: 2rem;
+    background-color: rgb(47, 143, 133);
+    padding: .7rem;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.navbar ul li .hide a:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+
+.navbar ul li a {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.navbar ul li>a:hover {
+    color: rgb(255, 74, 74);
+}
+
+
+button {
+    padding: .1rem .4rem;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+}
+
+.navbar #login {
+    background-color: blue;
+    border-radius: 1rem;
+    font-size: .8rem;
+    padding: 0 .7rem;
+}
+
+.navbar #login:hover {
+    background-color: white;
+    color: blue;
+    transition: all 1s;
+}
+
+
+.menubar {
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    visibility: hidden;
+    z-index: 12;
+}
+.sites {
+    display: flex;
+    gap: 5rem;
+    font-size: 1.4rem;
+    justify-content: center;
+    margin: 4rem 0;
+    opacity: .5;
+}
+
+
+
+.hide::before {
+    content: '';
+    height: 25px;
+    width: 25px;
+    background-color: rgb(47, 143, 133);
+    position: absolute;
+    top: -6px;
+    left: 10px;
+    transform: rotate(45deg);
+    z-index: -10;
+}
+
+.sidebar {
+    display: none;
+}
+
+.navbar ul li a i {
+    font-size: .6rem;
+}
+
+.fa-bars {
+    cursor: pointer;
+}
+
+
+.sidebar {
+    display: inline-block;
+    background-color: rebeccapurple;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 0 1rem;
+    /* width: 350px; */
+    overflow: auto;
+    padding-bottom: 2rem;
+    transform: translateX(360px);
+    transition: all .6s;
+    display: none;
+    z-index: 15;
+}
+
+.sidebar .fa-xmark {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+.sidebar ul li a {
+    color: white;
+}
+
+.sidebar ul li {
+    line-height: 3rem;
+}
+
+.sidebar ul {
+    margin-top: 4rem;
+}
+
+.sidebar #cart2 {
+    position: absolute;
+    top: 1rem;
+    left: .2rem;
+}
+
+.sidebar #login2 {
+    width: 100%;
+    border-radius: .5rem;
+    padding: .3rem 0;
+    background-color: white;
+    color: blue;
+    border-width: 0;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.sidebar ul li div {
+    padding-left: 2rem;
+}
+
+.div {
+    transition: all 2s;
+}
+
+.hidesidebar {
+    height: 0px;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.webhosting {
+    width: 100%;
+    /* background-color: red; */
+    text-align: center;
+    color: rgb(73, 73, 73);
+}
+
+.webhosting .heading {
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    letter-spacing: 1.5px;
+}
+
+
+
+.webhosting .heading h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.webhosting>h1 {
+    margin: 3rem 0;
+    padding: 1.3rem 0;
+    text-align: center;
+    background-color: rgb(83, 43, 226);
+    color: white;
+    margin-top: 5rem;
+}
+
+.webhosting .price {
+    display: inline-block;
+    margin: auto;
+    box-shadow: 5px 5px 10px grey;
+    border-radius: 1rem;
+    text-align: center;
+    width: 320px;
+    padding: 3rem 0;
+    /* line-height: 2rem; */
+    color: rgb(0, 62, 112);
+    font-weight: bolder;
+}
+
+.webhosting .price #buy {
+    padding: .6rem 1.2rem;
+    /* border: 2px solid red; */
+    color: white;
+    background-color: blueviolet;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    width: 40%;
+    transition: all .7s;
+}
+
+.webhosting .price #buy:hover {
+    background-color: rgb(97, 0, 187);
+    transition: all 1s;
+}
+
+.webhosting .price:hover {
+    transform: translateY(-1rem);
+    box-shadow: 15px 15px 30px rgb(65, 65, 65);
+    transition: all .7s;
+}
+
+.features {
+    display: flex;
+    margin-top: 4rem;
+    /* background-color: red; */
+    gap: 8rem;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.feature {
+    text-align: justify;
+}
+
+.feature ul li span {
+    font-weight: bolder;
+}
+
+
+.services h1 {
+    margin: 3rem 0;
+    text-align: center;
+    font-size: 2rem;
+    background-color: blueviolet;
+    padding: 1rem 0;
+    color: white;
+}
+
+.service {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    color: rgb(13, 41, 92);
+    font-size: .9rem;
+    padding: 0 1rem;
+}
+
+
+.service h3 i {
+    padding: 0 .5rem;
+    font-size: 1.5rem;
+    display: block;
+    color: rgb(88, 0, 202);
+    margin-bottom: 1rem;
+}
+
+.service h3 {
+    padding: 1rem 0;
+    text-align: center;
+    /* line-height: 3rem; */
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.service h3:hover {
+    box-shadow: inset 3px 3px 5px rgb(170, 170, 170),
+                3px 3px 5px rgb(170, 170, 170);
+    transform: translateY(.5rem) scale(.8);
+    transition: all .8s;
+}
+
+
+.reviews .review img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.reviews h1 {
+    margin: 3rem 0;
+    text-align: center;
+    font-size: 2rem;
+    /* background-color: rgb(33, 33, 141); */
+    padding: 1rem 0;
+    color: rgb(172, 104, 2);
+    margin-bottom: 1rem;
+}
+
+.reviews>h1 span {
+    display: inline-block;
+    width: 90px;
+    height: 4px;
+    background-color: rgb(189, 115, 5);
+    border-radius: 1rem;
+    position: relative;
+    bottom: 2rem;
+}
+
+.reviews .review {
+    /* background-color: red; */
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    padding: 1rem;
+    /* border: 1px solid black; */
+    border-radius: .5rem;
+    background-color: rgb(224, 224, 252);
+}
+
+.reviews .review:hover {
+    box-shadow: 5px 5px 10px rgb(128, 128, 128);
+    transform: translate(-.3rem, -.5rem);
+    transition: all .6s;
+}
+
+#work {
+    font-weight: 300;
+    margin-bottom: 1.3rem;
+}
+
+#disc {
+    line-height: 1.3rem;
+    height: 5rem;
+}
+
+.review i {
+    cursor: pointer;
+    margin: 0 .5rem;
+}
+
+.improvements {
+    margin-top: 5rem;
+}
+
+.improvements .improve .text {
+    width: 40%;
+    color: rgb(82, 82, 82);
+}
+
+.improvements .improve .text h1 {
+    margin-bottom: 1.3rem;
+    font-size: 1.8rem;
+    color: rgb(63, 129, 155);
+}
+
+.improvements .improve {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+    /* font-size: 1.1rem; */
+    /* width: 400px; */
+}
+
+.improvements .improve img {
+    height: 50%;
+    opacity: .9;
+}
+
+.recommended h1{
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 1.8rem;
+    color: rgb(25, 25, 90);
+}
+.recommend{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 5rem; */
+    gap: 5rem;
+    padding: 0 1rem;
+}
+.recommend .recom{
+    width: 350px;
+    border-radius: .3rem;
+    height: 270px;
+    padding: 1rem;
+    box-shadow: 5px 5px 10px rgb(188, 195, 218),
+                inset 3px 3px 10px rgb(245, 246, 255);
+    transition: all 1s;
+}
+.recommend .recom:hover{
+    transform: translateY(-1rem);
+    transition: all 1s;
+}
+
+.recommend .recom img{
+    margin-top: 2rem;
+    width: 100%;
+}
+.recommend .recom p{
+    margin-top: 1rem;
+}
+
+.good{
+    /* text-align: center; */
+    padding: 0 1rem;
+    /* font-size: 1.7rem; */
+    margin: 4rem 0;
+    color: rgb(56, 56, 56);
+}
+.good h1{
+    margin: 1rem 0;
+    font-size: 1.7rem;
+}
+.good>p{
+    margin: .5rem 0;
+}
+.good a{
+    text-decoration: underline;
+}
+
+.another>h1{
+    text-align: center;
+    color: rgb(49, 49, 49);
+}
+.another .others{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: red; */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.another .others .card{
+    width: 27%;
+    /* padding: 1rem; */
+    background-color: rgb(255, 255, 255);
+    color: white;
+    border-radius: .5rem;
+    height: 190px;
+}
+.another .others .card p{
+    padding: .5rem 1rem;
+    background-color: rgb(125, 125, 235);
+    border-radius: .5rem .5rem 0 0;
+}
+.another .others .card h2{
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    color: green;
+}
+.another .others .card h1{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
+    color: rgb(0, 0, 88);
+}
+
+
+footer{
+    margin-top: 5rem;
+    background-color: rgb(37, 37, 37);
+    font-size: .8rem;
+    color: rgb(255, 255, 255);
+    padding: 0 1rem;
+}
+.footer{
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+footer img{
+    height: 100px;
+}
+.footer i{
+    font-size: 1.5rem;
+    margin-right: .2rem;
+    cursor: pointer;
+}
+.footer .leftfooter p{
+    margin-bottom: 1rem;
+}
+
+
+@media only screen and (max-width:950px) {
+    .navbar {
+        display: none;
+    }
+
+    .menubar {
+        visibility: visible;
+    }
+
+    .sidebar {
+        display: block;
+    }
+    .landpage img{
+        opacity: .5;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    html {
+        font-size: 15px;
+    }
+
+    .overview {
+        max-width: 400px;
+        /* margin-top: 7rem; */
+    }
+
+    .sites {
+        display: none;
+    }
+
+    .features {
+        gap: 4rem;
+    }
+
+    .webhosting .heading {
+        letter-spacing: 1px;
+    }
+    .landpage img{
+        opacity: .1;
+    }
+    .recommend{
+        flex-direction: column;
+    }
+    
+}
+
+@media only screen and (max-width:530px) {
+    .features {
+        flex-direction: column;
+        padding-left: 2rem;
+    }
+
+    .webhosting .price {
+        width: 250px;
+        padding: 2rem 1rem;
+    }
+
+    .webhosting .heading {
+        letter-spacing: normal;
+    }
+
+    .reviews .review {
+        width: 90%;
+    }
+
+    .improvements .improve {
+        flex-direction: column;
+        height: 80vh;
+    }
+
+    .improvements .improve:nth-child(odd) {
+        flex-direction: column-reverse;
+    }
+
+    .improvements .improve .text {
+        width: 80%;
+    }
+
+    .improvements .improve img {
+        width: 40%;
+        height: auto;
+    }
+    .landpage .leftside {
+        width: 100%;
+        margin-left: 2rem;
+    }
+    .landpage .leftside p{
+        width: 90%;
+        /* margin-left: 2rem; */
+    }
+    .another .others .card{
+        width: 40%;
+        height: 160px;
+    }
+    .footer{
+        grid-template-columns: 1fr;
+    }
+    footer img{
+        height: 70px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .overview {
+        max-width: 90%;
+        /* margin-top: 0; */
+        box-shadow: none;
+        padding-top: 0;
+    }
+
+    .overview h1 {
+        font-size: 2.1rem;
+    }
+
+    .service {
+        font-size: .8rem;
+    }
+
+    .service h3 i {
+        font-size: 1.2rem;
+    }
+
+    .reviews .review img {
+        height: 80px;
+        width: 80px;
+    }
+    .recommend .recom{
+        width: 90%;
+    }
+    .another .others .card{
+        width: 80%;
+        height: 150px;
+    }
+}
+
+
+

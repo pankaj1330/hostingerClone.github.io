@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+    <section class="landingPage">
+        <header class="navigationbar">
+            <img src="Hostinger-logo.png" alt="Hostinger" id="logo">
+            <!-- <h2 class="logo">HOSTINGER</h2> -->
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#" onclick="show1()" class="close">Hosting <i class="fa-solid fa-angle-up"></i> </a>
+                        <div class="hide hidden">
+                            <a href="#">Web Hosting</a>
+                            <a href="#">Cloud Hosting</a>
+                            <a href="#">WordPress Hosting</a>
+                            <a href="#">Hosting for Agencies</a>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="show2()" class="close">VPS <i class="fa-solid fa-angle-up"></i> </a>
+                        <div class="hide hidden">
+                            <a href="#">VPS Hosting</a>
+                            <a href="#">CyberPanel Hosting</a>
+                            <a href="#">Minecraft Server Hosting</a>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="show3()" class="close">Email <i class="fa-solid fa-angle-up"></i></a>
+                        <div class="hide hidden">
+                            <a href="#">Google Workshop Email Hosting</a>
+                            <a href="#">Titan Email Hosting</a>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="show4()" class="close">Domain <i class="fa-solid fa-angle-up"></i></a>
+                        <div class="hide hidden">
+                            <a href="#">Domain Checkup</a>
+                            <a href="#">Whois Lookup</a>
+                            <a href="#">Domain Transfer</a>
+                        </div>
+                    </li>
+                </ul>
+                <button id="login">Login</button>
+                <button id="cart"> <i class="fa-solid fa-cart-shopping"></i> Cart</button>
+            </nav>
+        </header>
+
+        <i class="fa-solid fa-bars menubar" onclick="menubar()"></i>
+
+        <nav class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="#" onclick="sideshow1()">Hosting <i class="fa-solid fa-angle-up"></i> </a>
+                    <div class="div hidesidebar">
+                        <a href="#">Web Hosting</a> <br>
+                        <a href="#">Cloud Hosting</a> <br>
+                        <a href="#">WordPress Hosting</a> <br>
+                        <a href="#">Hosting for Agencies</a>
+                    </div>
+                </li>
+                <li><a href="#" onclick="sideshow2()">VPS <i class="fa-solid fa-angle-up"></i> </a>
+                    <div class="div hidesidebar">
+                        <a href="#">VPS Hosting</a> <br>
+                        <a href="#">CyberPanel Hosting</a> <br>
+                        <a href="#">Minecraft Server Hosting</a>
+                    </div>
+                </li>
+                <li><a href="#" onclick="sideshow3()">Email <i class="fa-solid fa-angle-up"></i></a>
+                    <div class="div hidesidebar">
+                        <a href="#">Google Workshop Email Hosting</a> <br>
+                        <a href="#">Titan Email Hosting</a>
+                    </div>
+                </li>
+                <li><a href="#" onclick="sideshow4()">Domain <i class="fa-solid fa-angle-up"></i></a>
+                    <div class="div hidesidebar">
+                        <a href="#">Domain Checkup</a> <br>
+                        <a href="#">Whois Lookup</a> <br>
+                        <a href="#">Domain Transfer</a>
+                    </div>
+                </li>
+            </ul>
+            <button id="login2">Login</button>
+            <button id="cart2"> <i class="fa-solid fa-cart-shopping"></i> Cart</button>
+            <i class="fa-solid fa-xmark" onclick="cross()"></i>
+        </nav>
+        <section class="landpage">
+            <div class="leftside">
+                <h1>Savings to Set Your Website in Motion</h1>
+                <p style="margin-bottom: 2rem;letter-spacing: 1px;">Get things moving with a free domain, lifetime SSL,
+                    and
+                    DDoS protection included with a yearly
+                    subscription.</p>
+                <p style="color: greenyellow;font-weight: bolder;"> <span style="font-size: 3rem;"> <sup
+                            style="font-size: 1.5rem;">$</sup>2.99</span>/mo
+                </p>
+                <a href="#pricebox"> <button id="explore">Explore</button></a>
+            </div>
+            <img src="laptopgirl.png" alt="landingPage-image">
+        </section>
+
+    </section>
+
+    <section class="sites">
+        <div class="wordpress">
+            <i class="fa-brands fa-wordpress"></i> WordPress
+        </div>
+        <div class="litespeed">
+            <i class="fa-solid fa-bolt"></i> LITESPEED
+        </div>
+        <div class="cloudflare">
+            <i class="fa-brands fa-cloudflare"></i> CloudFlare
+        </div>
+    </section>
+
+    <section class="webhosting">
+        <div class="heading">
+            <h1>All-In-One Web Hosting</h1>
+            <p>We prepared the best web hosting plan for you to start. You will be able to adjust plans as you go - our
+                custom-built algorithm will provide suggestions based on your usage.</p>
+        </div>
+        <h1 id="pricebox">WEB HOSTING</h1>
+        <div class="price">
+            <p><span style="font-size: 3rem;"> <sup style="font-size: 1.5rem;">$</sup>2.99</span>/mo</p>
+            <h4>$6.99/mo when you renew</h4>
+            <button id="buy">Buy</button>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <ul>
+                    <li> <span>Unmetered</span> traffic (Unlimited GB)</li>
+                    <li> <span>100</span> Websites </li>
+                    <li><span>100 GB</span> SSD Storage </li>
+                    <li><span>Free</span> Weekly Backups</li>
+                </ul>
+            </div>
+            <div class="feature">
+                <ul>
+                    <li> <span>Unlimited</span> Free SSL</li>
+                    <li> <span>Free</span> Domain </li>
+                    <li><span>Free</span> Email </li>
+                    <li><span>Optimized</span> for WordPress</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <h1>Our services include</h1>
+        <div class="service">
+            <h3><i class="fa-brands fa-expeditedssl"></i> Free SSL </h3>
+            <h3><i class="fa-solid fa-rocket"></i> Free Migration </h3>
+            <h3><i class="fa-brands fa-php"></i> PHP boost speed </h3>
+            <h3><i class="fa-regular fa-comments"></i> 24x7 tech Support </h3>
+            <h3><i class="fa-solid fa-key"></i> Access Management </h3>
+            <h3><i class="fa-solid fa-database"></i> Backups </h3>
+            <h3><i class="fa-brands fa-wordpress"></i> Lite Speed Wordpress Module </h3>
+            <h3><i class="fa-solid fa-scroll"></i>Auto Script Inataller </h3>
+            <h3><i class="fa-solid fa-chart-line"></i> e-commerece optimization </h3>
+            <h3><i class="fa-brands fa-cloudflare"></i> DDoS protection </h3>
+            <h3><i class="fa-solid fa-arrow-pointer"></i>One click Wordpress installation </h3>
+            <h3><i class="fa-solid fa-ribbon"></i> 99.9% uptime guarantee </h3>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <h1>Clients Review <br><span></span></h1>
+        <div class="review">
+            <img src="boy1.jpeg"
+                alt="reviewer-1" id="revimage">
+            <h3 id="name">Name</h3>
+            <h3 id="work">Designer</h3>
+            <p id="disc">Support matters to me the most. Your specialists were always there to help me immediately.</p>
+            <i class="fa-solid fa-angle-left" id="left"></i>
+            <i class="fa-solid fa-angle-right" id="right"></i>
+        </div>
+    </section>
+
+    <section class="improvements">
+        <div class="improve">
+            <div class="text">
+                <h1>The Speed. We got it</h1>
+                <p>You can get more speed with Hostinger. Approved by industry experts.</p>
+            </div>
+            <img src="tower.png" alt="speed">
+        </div>
+        <div class="improve">
+            <img src="complex.png" alt="Complexity">
+            <div class="text">
+                <h1>Complexity.
+                    We've removed it</h1>
+                <p>Try our custom-built hPanel. It's intuitive, fast and better than cPanel.</p>
+            </div>
+        </div>
+        <div class="improve">
+            <div class="text">
+                <h1>WordPress.
+                    We love it</h1>
+                <p>And you should too. With LiteSpeed caching, HTTP/2, HTTP/3 (Quic) and IPv6, PHP8, GZIP compression,
+                    threat detection and the latest infrastructure updates your WordPress websites will be fast and
+                    stable.</p>
+            </div>
+            <img src="wordprees.png" alt="WordPress">
+        </div>
+        <div class="improve">
+            <img src="callsupport.webp" alt="callsupport-image">
+            <div class="text">
+                <h1>Your back.
+                    We have it</h1>
+                <p>Our tech support team is here to help you 24/7/365.</p>
+            </div>
+        </div>
+        <div class="improve">
+            <div class="text">
+                <h1>Hosting elsewhere? Migrate for free</h1>
+                <p>Use our automated migration tool for WordPress or have our migration team do the job for you.</p>
+            </div>
+            <img src="laptopgirl.png" alt="image">
+        </div>
+    </section>
+
+
+    <section class="recommended">
+        <h1>But don't just take our word for it</h1>
+        <div class="recommend">
+
+            <div class="recom">
+                <p>Hostinger is a reliable hosting company with years of experience in the shared hosting industry.
+                <p>
+                <p style="font-weight: bolder;">Recommended By :</p>
+                <img src="wpbeginner.png" alt="wpbeginner">
+            </div>
+            <div class="recom">
+                <p>From the marketing to the UI for managing your site, it feels like a premium host.
+                <p>
+                <p style="font-weight: bolder;">Recommended By :</p>
+                <img src="quicksprout.png"
+                    alt="quicksprout">
+            </div>
+        </div>
+    </section>
+
+    <section class="good">
+        <h1>OK, you are a tough one</h1>
+        <p>You scrolled this far. That's impressive!</p>
+        <p>The best way to pick a web hosting provider is to try the services. All our plans come with a 30-day money
+            back guarantee. If you do not like what you get - we will refund your purchase. No questions asked.
+        </p>
+        <a href="#">Learn more</a>
+    </section>
+
+    <section class="another">
+        <h1>Still reading?</h1>
+        <h1>Are you searching for something else?</h1>
+        <div class="others">
+            <div class="card">
+                <p><span style="font-size: 2rem;"> <sup style="font-size: 1rem;">$</sup>9.99</span>/mo</p>
+                <h1>Cloud Hosting</h1>
+                <h2>For large Scale Projects</h2>
+            </div>
+            <div class="card">
+                <p><span style="font-size: 2rem;"> <sup style="font-size: 1rem;">$</sup>3.49</span>/mo</p>
+                <h1>VPS Hosting</h1>
+                <h2>Build the Projects your ways</h2>
+            </div>
+            <div class="card">
+                <p><span style="font-size: 2rem;"> <sup style="font-size: 1rem;">$</sup>1.99</span>/mo</p>
+                <h1>WordPress Hosting</h1>
+                <h2>Perfect for personal Projects</h2>
+            </div>
+            <div class="card">
+                <p><span style="font-size: 2rem;"> <sup style="font-size: 1rem;">$</sup>0.99</span>/mo</p>
+                <h1>Domain</h1>
+                <h2>Find your unique domain</h2>
+            </div>
+            <div class="card">
+                <p><span style="font-size: 2rem;"> <sup style="font-size: 1rem;">$</sup>0.99</span>/mo</p>
+                <h1>Email Hosting</h1>
+                <h2>Email hosting for your Projects</h2>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+
+        <img src="hostinger-logo.png" alt="hostinger-logo">
+        <section class="footer">
+            <div class="leftfooter">
+                <p>We are a web hosting provider on a mission to bring success to everyone who goes online.
+                    We do it by constantly improving server technology, providing professional support, and making the web
+                    hosting experience seamless.</p>
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-discover"></i>
+                <i class="fa-brands fa-cc-jcb"></i>
+                <i class="fa-regular fa-credit-card"></i>
+            </div>
+            <div class="privacy">
+                <h1>Legal</h1>
+                <p>Privacy Policy</p>
+                <p>Terms of service</p>
+            </div>
+            <div class="rightfooter">
+                <h1>Follow Us On</h1>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-twitch"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+            </div>
+        </section>
+
+
+
+        <marquee direction="rtl"> &copy 2004-2022 hostinger.com - Premium Web Hosting, Cloud, VPS & Domain Registration
+            Services.</marquee>
+    </footer>
+
+
+
+    <!-- script js link  -->
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
