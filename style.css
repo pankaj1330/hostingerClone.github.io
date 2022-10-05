@@ -9,6 +9,7 @@
 
 body {
     background-color: rgb(241, 247, 255);
+    max-width:1400px;
 }
 
 html {
